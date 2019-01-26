@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D477180821EDA39A0050DF14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D477180721EDA39A0050DF14 /* AppDelegate.m */; };
+		D477180B21EDA39A0050DF14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D477180A21EDA39A0050DF14 /* ViewController.m */; };
+		D477180E21EDA39A0050DF14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D477180C21EDA39A0050DF14 /* Main.storyboard */; };
+		D477181021EDA39B0050DF14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D477180F21EDA39B0050DF14 /* Assets.xcassets */; };
+		D477181321EDA39B0050DF14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D477181121EDA39B0050DF14 /* LaunchScreen.storyboard */; };
+		D477181621EDA39B0050DF14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D477181521EDA39B0050DF14 /* main.m */; };
+		D477182021EDA39B0050DF14 /* Fork_MWFeedParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D477181F21EDA39B0050DF14 /* Fork_MWFeedParserTests.m */; };
+		D477184C21EDA3D40050DF14 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184121EDA3D40050DF14 /* MWFeedInfo.m */; };
+		D477184D21EDA3D40050DF14 /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184321EDA3D40050DF14 /* MWFeedParser.m */; };
+		D477184E21EDA3D40050DF14 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184621EDA3D40050DF14 /* MWFeedItem.m */; };
+		D477184F21EDA3D40050DF14 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184821EDA3D40050DF14 /* NSDate+InternetDateTime.m */; };
+		D477185021EDA3D40050DF14 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184A21EDA3D40050DF14 /* NSString+HTML.m */; };
+		D477185121EDA3D40050DF14 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184B21EDA3D40050DF14 /* GTMNSString+HTML.m */; };
+		D477185521EDA8710050DF14 /* FMFeedParserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D477185421EDA8710050DF14 /* FMFeedParserOperation.m */; };
+		D477185921EDAAD20050DF14 /* RPAsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D477185721EDAAD20050DF14 /* RPAsyncOperation.m */; };
+		D477185D21EDBBA30050DF14 /* FMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D477185C21EDBBA30050DF14 /* FMParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D477181C21EDA39B0050DF14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D47717FB21EDA39A0050DF14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D477180221EDA39A0050DF14;
+			remoteInfo = "Fork-MWFeedParser";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D477180321EDA39A0050DF14 /* Fork-MWFeedParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fork-MWFeedParser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D477180621EDA39A0050DF14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D477180721EDA39A0050DF14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D477180921EDA39A0050DF14 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D477180A21EDA39A0050DF14 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D477180D21EDA39A0050DF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D477180F21EDA39B0050DF14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D477181221EDA39B0050DF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D477181421EDA39B0050DF14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D477181521EDA39B0050DF14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D477181B21EDA39B0050DF14 /* Fork-MWFeedParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fork-MWFeedParserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D477181F21EDA39B0050DF14 /* Fork_MWFeedParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fork_MWFeedParserTests.m; sourceTree = "<group>"; };
+		D477182121EDA39B0050DF14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D477183F21EDA3D40050DF14 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		D477184021EDA3D40050DF14 /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		D477184121EDA3D40050DF14 /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		D477184221EDA3D40050DF14 /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		D477184321EDA3D40050DF14 /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		D477184421EDA3D40050DF14 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		D477184521EDA3D40050DF14 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		D477184621EDA3D40050DF14 /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		D477184721EDA3D40050DF14 /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		D477184821EDA3D40050DF14 /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		D477184921EDA3D40050DF14 /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		D477184A21EDA3D40050DF14 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		D477184B21EDA3D40050DF14 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		D477185321EDA8710050DF14 /* FMFeedParserOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMFeedParserOperation.h; sourceTree = "<group>"; };
+		D477185421EDA8710050DF14 /* FMFeedParserOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMFeedParserOperation.m; sourceTree = "<group>"; };
+		D477185621EDA8AE0050DF14 /* FMFeedParserOperation+ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMFeedParserOperation+ext.h"; sourceTree = "<group>"; };
+		D477185721EDAAD20050DF14 /* RPAsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPAsyncOperation.m; sourceTree = "<group>"; };
+		D477185821EDAAD20050DF14 /* RPAsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPAsyncOperation.h; sourceTree = "<group>"; };
+		D477185B21EDBBA30050DF14 /* FMParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMParser.h; sourceTree = "<group>"; };
+		D477185C21EDBBA30050DF14 /* FMParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D477180021EDA39A0050DF14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D477181821EDA39B0050DF14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D47717FA21EDA39A0050DF14 = {
+			isa = PBXGroup;
+			children = (
+				D477185221EDA82B0050DF14 /* Function */,
+				D477183E21EDA3D40050DF14 /* Classes */,
+				D477180521EDA39A0050DF14 /* Fork-MWFeedParser */,
+				D477181E21EDA39B0050DF14 /* Fork-MWFeedParserTests */,
+				D477180421EDA39A0050DF14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D477180421EDA39A0050DF14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D477180321EDA39A0050DF14 /* Fork-MWFeedParser.app */,
+				D477181B21EDA39B0050DF14 /* Fork-MWFeedParserTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D477180521EDA39A0050DF14 /* Fork-MWFeedParser */ = {
+			isa = PBXGroup;
+			children = (
+				D477180621EDA39A0050DF14 /* AppDelegate.h */,
+				D477180721EDA39A0050DF14 /* AppDelegate.m */,
+				D477180921EDA39A0050DF14 /* ViewController.h */,
+				D477180A21EDA39A0050DF14 /* ViewController.m */,
+				D477180C21EDA39A0050DF14 /* Main.storyboard */,
+				D477180F21EDA39B0050DF14 /* Assets.xcassets */,
+				D477181121EDA39B0050DF14 /* LaunchScreen.storyboard */,
+				D477181421EDA39B0050DF14 /* Info.plist */,
+				D477181521EDA39B0050DF14 /* main.m */,
+			);
+			path = "Fork-MWFeedParser";
+			sourceTree = "<group>";
+		};
+		D477181E21EDA39B0050DF14 /* Fork-MWFeedParserTests */ = {
+			isa = PBXGroup;
+			children = (
+				D477181F21EDA39B0050DF14 /* Fork_MWFeedParserTests.m */,
+				D477182121EDA39B0050DF14 /* Info.plist */,
+			);
+			path = "Fork-MWFeedParserTests";
+			sourceTree = "<group>";
+		};
+		D477183E21EDA3D40050DF14 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D477184021EDA3D40050DF14 /* MWFeedParser_Private.h */,
+				D477184721EDA3D40050DF14 /* MWFeedInfo.h */,
+				D477184121EDA3D40050DF14 /* MWFeedInfo.m */,
+				D477184221EDA3D40050DF14 /* MWFeedItem.h */,
+				D477184621EDA3D40050DF14 /* MWFeedItem.m */,
+				D477184921EDA3D40050DF14 /* MWFeedParser.h */,
+				D477184321EDA3D40050DF14 /* MWFeedParser.m */,
+				D477184421EDA3D40050DF14 /* NSString+HTML.h */,
+				D477184A21EDA3D40050DF14 /* NSString+HTML.m */,
+				D477183F21EDA3D40050DF14 /* NSDate+InternetDateTime.h */,
+				D477184821EDA3D40050DF14 /* NSDate+InternetDateTime.m */,
+				D477184521EDA3D40050DF14 /* GTMNSString+HTML.h */,
+				D477184B21EDA3D40050DF14 /* GTMNSString+HTML.m */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		D477185221EDA82B0050DF14 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				D477185821EDAAD20050DF14 /* RPAsyncOperation.h */,
+				D477185721EDAAD20050DF14 /* RPAsyncOperation.m */,
+				D477185321EDA8710050DF14 /* FMFeedParserOperation.h */,
+				D477185621EDA8AE0050DF14 /* FMFeedParserOperation+ext.h */,
+				D477185421EDA8710050DF14 /* FMFeedParserOperation.m */,
+				D477185B21EDBBA30050DF14 /* FMParser.h */,
+				D477185C21EDBBA30050DF14 /* FMParser.m */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D477180221EDA39A0050DF14 /* Fork-MWFeedParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D477182421EDA39B0050DF14 /* Build configuration list for PBXNativeTarget "Fork-MWFeedParser" */;
+			buildPhases = (
+				D47717FF21EDA39A0050DF14 /* Sources */,
+				D477180021EDA39A0050DF14 /* Frameworks */,
+				D477180121EDA39A0050DF14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fork-MWFeedParser";
+			productName = "Fork-MWFeedParser";
+			productReference = D477180321EDA39A0050DF14 /* Fork-MWFeedParser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D477181A21EDA39B0050DF14 /* Fork-MWFeedParserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D477182721EDA39B0050DF14 /* Build configuration list for PBXNativeTarget "Fork-MWFeedParserTests" */;
+			buildPhases = (
+				D477181721EDA39B0050DF14 /* Sources */,
+				D477181821EDA39B0050DF14 /* Frameworks */,
+				D477181921EDA39B0050DF14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D477181D21EDA39B0050DF14 /* PBXTargetDependency */,
+			);
+			name = "Fork-MWFeedParserTests";
+			productName = "Fork-MWFeedParserTests";
+			productReference = D477181B21EDA39B0050DF14 /* Fork-MWFeedParserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D47717FB21EDA39A0050DF14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = orzer;
+				TargetAttributes = {
+					D477180221EDA39A0050DF14 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					D477181A21EDA39B0050DF14 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D477180221EDA39A0050DF14;
+					};
+				};
+			};
+			buildConfigurationList = D47717FE21EDA39A0050DF14 /* Build configuration list for PBXProject "Fork-MWFeedParser" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D47717FA21EDA39A0050DF14;
+			productRefGroup = D477180421EDA39A0050DF14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D477180221EDA39A0050DF14 /* Fork-MWFeedParser */,
+				D477181A21EDA39B0050DF14 /* Fork-MWFeedParserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D477180121EDA39A0050DF14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D477181321EDA39B0050DF14 /* LaunchScreen.storyboard in Resources */,
+				D477181021EDA39B0050DF14 /* Assets.xcassets in Resources */,
+				D477180E21EDA39A0050DF14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D477181921EDA39B0050DF14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D47717FF21EDA39A0050DF14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D477184E21EDA3D40050DF14 /* MWFeedItem.m in Sources */,
+				D477185921EDAAD20050DF14 /* RPAsyncOperation.m in Sources */,
+				D477180B21EDA39A0050DF14 /* ViewController.m in Sources */,
+				D477185121EDA3D40050DF14 /* GTMNSString+HTML.m in Sources */,
+				D477185021EDA3D40050DF14 /* NSString+HTML.m in Sources */,
+				D477181621EDA39B0050DF14 /* main.m in Sources */,
+				D477184F21EDA3D40050DF14 /* NSDate+InternetDateTime.m in Sources */,
+				D477184D21EDA3D40050DF14 /* MWFeedParser.m in Sources */,
+				D477185521EDA8710050DF14 /* FMFeedParserOperation.m in Sources */,
+				D477185D21EDBBA30050DF14 /* FMParser.m in Sources */,
+				D477180821EDA39A0050DF14 /* AppDelegate.m in Sources */,
+				D477184C21EDA3D40050DF14 /* MWFeedInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D477181721EDA39B0050DF14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D477182021EDA39B0050DF14 /* Fork_MWFeedParserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D477181D21EDA39B0050DF14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D477180221EDA39A0050DF14 /* Fork-MWFeedParser */;
+			targetProxy = D477181C21EDA39B0050DF14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D477180C21EDA39A0050DF14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D477180D21EDA39A0050DF14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D477181121EDA39B0050DF14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D477181221EDA39B0050DF14 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D477182221EDA39B0050DF14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D477182321EDA39B0050DF14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D477182521EDA39B0050DF14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZLQPGKAQFY;
+				INFOPLIST_FILE = "Fork-MWFeedParser/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orzer.Fork-MWFeedParser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D477182621EDA39B0050DF14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZLQPGKAQFY;
+				INFOPLIST_FILE = "Fork-MWFeedParser/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orzer.Fork-MWFeedParser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D477182821EDA39B0050DF14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZLQPGKAQFY;
+				INFOPLIST_FILE = "Fork-MWFeedParserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orzer.Fork-MWFeedParserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fork-MWFeedParser.app/Fork-MWFeedParser";
+			};
+			name = Debug;
+		};
+		D477182921EDA39B0050DF14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZLQPGKAQFY;
+				INFOPLIST_FILE = "Fork-MWFeedParserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.orzer.Fork-MWFeedParserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fork-MWFeedParser.app/Fork-MWFeedParser";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D47717FE21EDA39A0050DF14 /* Build configuration list for PBXProject "Fork-MWFeedParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D477182221EDA39B0050DF14 /* Debug */,
+				D477182321EDA39B0050DF14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D477182421EDA39B0050DF14 /* Build configuration list for PBXNativeTarget "Fork-MWFeedParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D477182521EDA39B0050DF14 /* Debug */,
+				D477182621EDA39B0050DF14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D477182721EDA39B0050DF14 /* Build configuration list for PBXNativeTarget "Fork-MWFeedParserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D477182821EDA39B0050DF14 /* Debug */,
+				D477182921EDA39B0050DF14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D47717FB21EDA39A0050DF14 /* Project object */;
+}
