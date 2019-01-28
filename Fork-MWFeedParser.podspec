@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Fork-MWFeedParser"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "MWFeedParser的修改"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  MWFeedParser修改了网络请求部分。
+  MWFeedParser修改了网络请求部分。封装了异步操作。
                    DESC
 
   s.homepage     = "https://github.com/zsy78191/Fork-MWFeedParser"
