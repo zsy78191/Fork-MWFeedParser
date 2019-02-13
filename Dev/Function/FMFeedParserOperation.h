@@ -11,13 +11,28 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    FMParseTypeFull = 0,
+    FMParseTypeItems,
+    FMParseTypeInfo,
+} FMParseType;
+@class MWFeedInfo;
+@class MWFeedItem;
+
 @interface FMFeedParserOperation : RPAsyncOperation
 
 @property (nonatomic, strong) NSURL* feedURL;
 @property (nonatomic, strong) NSString* title;
 
+@property (nonatomic, assign) FMParseType type;
+
 @property (nonatomic, weak) NSOperationQueue* netWorkQuene;
 @property (nonatomic, weak) NSURLSession* session;
+
+@property (nonatomic, strong) void(^ parseInfoBlock)(MWFeedInfo* info);
+@property (nonatomic, strong) void(^ parseItemBlock)(MWFeedItem* item);
+@property (nonatomic, strong) void(^ parseFinishBlock)(void);
+@property (nonatomic, strong) void(^ parseErrorBlock)(NSError* error);
 
 @end
 

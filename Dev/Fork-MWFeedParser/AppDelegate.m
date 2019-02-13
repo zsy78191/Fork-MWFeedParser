@@ -72,6 +72,9 @@
         o.feedURL = [NSURL URLWithString:url];
         o.title = name;
         o.netWorkQuene = quene;
+        [o setParseInfoBlock:^(MWFeedInfo * _Nonnull info) {
+            NSLog(@"%@",info);
+        }];
         return o;
     };
     

@@ -15,7 +15,20 @@
 {
     [super main];
     FMParser* parser = [[FMParser alloc] initWithFeedURL:self.feedURL];
-    parser.feedParseType = ParseTypeFull;
+    switch (self.type) {
+        case FMParseTypeFull:
+            parser.feedParseType = ParseTypeFull;
+            break;
+        case FMParseTypeInfo:
+            parser.feedParseType = ParseTypeInfoOnly;
+            break;
+        case FMParseTypeItems:
+            parser.feedParseType = ParseTypeItemsOnly;
+            break;
+        default:
+            break;
+    }
+    
     parser.delegate  = self;
     
     [parser parseWithQuene:self.netWorkQuene];
@@ -24,28 +37,39 @@
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error
 {
+    if (self.parseErrorBlock) {
+        self.parseErrorBlock(error);
+    }
     self.state = RPAsyncOperationStateFinished;
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser
 {
+    if (self.parseFinishBlock) {
+        self.parseFinishBlock();
+    }
     self.state = RPAsyncOperationStateFinished;
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info
 {
-    NSLog(@"[%@] %@",self.title,info);
+//    NSLog(@"[%@] %@",self.title,info);
+    if (self.parseInfoBlock) {
+        self.parseInfoBlock(info);
+    }
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item
 {
 //    NSLog(@"-- %@",item.title);
+    if (self.parseItemBlock) {
+        self.parseItemBlock(item);
+    }
 }
 
 - (void)dealloc
 {
     self.parser.delegate = nil;
-    NSLog(@"%@ %s",self,__func__);
 }
  
 
