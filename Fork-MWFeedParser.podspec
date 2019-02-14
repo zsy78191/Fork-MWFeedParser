@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Fork-MWFeedParser"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "MWFeedParser的修改"
 
   # This description is used to generate tags and improve search results.
