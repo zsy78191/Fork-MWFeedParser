@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [self test];
+    [self test];
     NSLog(@"%s",__func__);
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
     NSLog(@"%@",launchOptions);
@@ -29,7 +29,7 @@
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    [self test];
+//    [self test];
     NSLog(@"%s",__func__);
     completionHandler(UIBackgroundFetchResultNewData);
 }
@@ -75,6 +75,9 @@
         [o setParseInfoBlock:^(MWFeedInfo * _Nonnull info) {
             NSLog(@"%@",info);
         }];
+        [o setParseItemBlock:^(MWFeedItem * _Nonnull item) {
+            NSLog(@"%@",item);
+        }];
         return o;
     };
     
@@ -86,9 +89,10 @@
     [q2 setMaxConcurrentOperationCount:10];
     self.netQuene = q2;
     
-    
-    [q addOperation:feed(@"1",@"http://www.zhihu.com/rss",q2)];
-//    [q addOperation:feed(@"2",@"http://www.zhihu.com/rss",q2)];
+    FMFeedParserOperation* o = feed(@"1",@"https://sspai.com/feed",q2);
+    [o setType:FMParseTypeFull];
+    [q addOperation:o];
+//    [q addOperation:feed(@"2",@"https://www.zhangzichuan.cn/atom.xml",q2)];
 //    [q addOperation:feed(@"3",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"4",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"5",@"http://www.zhihu.com/rss",q2)];

@@ -73,7 +73,6 @@
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info
 {
 //    NSLog(@"[%@] %@",self.title,info);
-    self.state = RPAsyncOperationStateFinished;
     if (self.cancelled) {
         if (self.parseCanncelBlock) {
             self.parseCanncelBlock();
