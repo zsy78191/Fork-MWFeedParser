@@ -29,6 +29,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, weak) NSOperationQueue* netWorkQuene;
 @property (nonatomic, weak) NSURLSession* session;
 
+@property (nonatomic, strong) void(^ parseCanncelBlock)(void);
 @property (nonatomic, strong) void(^ parseInfoBlock)(MWFeedInfo* info);
 @property (nonatomic, strong) void(^ parseItemBlock)(MWFeedItem* item);
 @property (nonatomic, strong) void(^ parseFinishBlock)(void);

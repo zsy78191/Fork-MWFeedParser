@@ -31,29 +31,55 @@
     
     parser.delegate  = self;
     
-    [parser parseWithQuene:self.netWorkQuene];
-    self.parser = parser;
+    if (self.cancelled) {
+        if (self.parseCanncelBlock) {
+            self.parseCanncelBlock();
+        }
+    }
+    else {
+        [parser parseWithQuene:self.netWorkQuene];
+        self.parser = parser;
+    }
 }
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error
 {
+    self.state = RPAsyncOperationStateFinished;
+    if (self.cancelled) {
+        if (self.parseCanncelBlock) {
+            self.parseCanncelBlock();
+        }
+        return;
+    }
     if (self.parseErrorBlock) {
         self.parseErrorBlock(error);
     }
-    self.state = RPAsyncOperationStateFinished;
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser
 {
+    self.state = RPAsyncOperationStateFinished;
+    if (self.cancelled) {
+        if (self.parseCanncelBlock) {
+            self.parseCanncelBlock();
+        }
+        return;
+    }
     if (self.parseFinishBlock) {
         self.parseFinishBlock();
     }
-    self.state = RPAsyncOperationStateFinished;
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info
 {
 //    NSLog(@"[%@] %@",self.title,info);
+    self.state = RPAsyncOperationStateFinished;
+    if (self.cancelled) {
+        if (self.parseCanncelBlock) {
+            self.parseCanncelBlock();
+        }
+        return;
+    }
     if (self.parseInfoBlock) {
         self.parseInfoBlock(info);
     }
@@ -62,6 +88,12 @@
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item
 {
 //    NSLog(@"-- %@",item.title);
+    if (self.cancelled) {
+        if (self.parseCanncelBlock) {
+            self.parseCanncelBlock();
+        }
+        return;
+    }
     if (self.parseItemBlock) {
         self.parseItemBlock(item);
     }
