@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D440D0012216970F003B7203 /* FMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D440CFFA2216970F003B7203 /* FMParser.m */; };
+		D440D0022216970F003B7203 /* RPAsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D440CFFD2216970F003B7203 /* RPAsyncOperation.m */; };
+		D440D0032216970F003B7203 /* FMFeedParserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D440CFFF2216970F003B7203 /* FMFeedParserOperation.m */; };
 		D477180821EDA39A0050DF14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D477180721EDA39A0050DF14 /* AppDelegate.m */; };
 		D477180B21EDA39A0050DF14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D477180A21EDA39A0050DF14 /* ViewController.m */; };
 		D477180E21EDA39A0050DF14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D477180C21EDA39A0050DF14 /* Main.storyboard */; };
@@ -20,9 +23,6 @@
 		D477184F21EDA3D40050DF14 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184821EDA3D40050DF14 /* NSDate+InternetDateTime.m */; };
 		D477185021EDA3D40050DF14 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184A21EDA3D40050DF14 /* NSString+HTML.m */; };
 		D477185121EDA3D40050DF14 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D477184B21EDA3D40050DF14 /* GTMNSString+HTML.m */; };
-		D477185521EDA8710050DF14 /* FMFeedParserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D477185421EDA8710050DF14 /* FMFeedParserOperation.m */; };
-		D477185921EDAAD20050DF14 /* RPAsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D477185721EDAAD20050DF14 /* RPAsyncOperation.m */; };
-		D477185D21EDBBA30050DF14 /* FMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D477185C21EDBBA30050DF14 /* FMParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D440CFFA2216970F003B7203 /* FMParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMParser.m; sourceTree = "<group>"; };
+		D440CFFB2216970F003B7203 /* FMFeedParserOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFeedParserOperation.h; sourceTree = "<group>"; };
+		D440CFFC2216970F003B7203 /* FMFeedParserOperation+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMFeedParserOperation+ext.h"; sourceTree = "<group>"; };
+		D440CFFD2216970F003B7203 /* RPAsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPAsyncOperation.m; sourceTree = "<group>"; };
+		D440CFFE2216970F003B7203 /* FMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMParser.h; sourceTree = "<group>"; };
+		D440CFFF2216970F003B7203 /* FMFeedParserOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFeedParserOperation.m; sourceTree = "<group>"; };
+		D440D0002216970F003B7203 /* RPAsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPAsyncOperation.h; sourceTree = "<group>"; };
 		D477180321EDA39A0050DF14 /* Fork-MWFeedParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fork-MWFeedParser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D477180621EDA39A0050DF14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D477180721EDA39A0050DF14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,13 +69,6 @@
 		D477184921EDA3D40050DF14 /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
 		D477184A21EDA3D40050DF14 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		D477184B21EDA3D40050DF14 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
-		D477185321EDA8710050DF14 /* FMFeedParserOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMFeedParserOperation.h; sourceTree = "<group>"; };
-		D477185421EDA8710050DF14 /* FMFeedParserOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMFeedParserOperation.m; sourceTree = "<group>"; };
-		D477185621EDA8AE0050DF14 /* FMFeedParserOperation+ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMFeedParserOperation+ext.h"; sourceTree = "<group>"; };
-		D477185721EDAAD20050DF14 /* RPAsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPAsyncOperation.m; sourceTree = "<group>"; };
-		D477185821EDAAD20050DF14 /* RPAsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPAsyncOperation.h; sourceTree = "<group>"; };
-		D477185B21EDBBA30050DF14 /* FMParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMParser.h; sourceTree = "<group>"; };
-		D477185C21EDBBA30050DF14 /* FMParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +89,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D440CFF92216970F003B7203 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				D440CFFA2216970F003B7203 /* FMParser.m */,
+				D440CFFB2216970F003B7203 /* FMFeedParserOperation.h */,
+				D440CFFC2216970F003B7203 /* FMFeedParserOperation+ext.h */,
+				D440CFFD2216970F003B7203 /* RPAsyncOperation.m */,
+				D440CFFE2216970F003B7203 /* FMParser.h */,
+				D440CFFF2216970F003B7203 /* FMFeedParserOperation.m */,
+				D440D0002216970F003B7203 /* RPAsyncOperation.h */,
+			);
+			name = Function;
+			path = ../Classes/Function;
+			sourceTree = "<group>";
+		};
 		D47717FA21EDA39A0050DF14 = {
 			isa = PBXGroup;
 			children = (
-				D477185221EDA82B0050DF14 /* Function */,
+				D440CFF92216970F003B7203 /* Function */,
 				D477183E21EDA3D40050DF14 /* Classes */,
 				D477180521EDA39A0050DF14 /* Fork-MWFeedParser */,
 				D477181E21EDA39B0050DF14 /* Fork-MWFeedParserTests */,
@@ -153,20 +168,6 @@
 			);
 			name = Classes;
 			path = ../Classes;
-			sourceTree = "<group>";
-		};
-		D477185221EDA82B0050DF14 /* Function */ = {
-			isa = PBXGroup;
-			children = (
-				D477185821EDAAD20050DF14 /* RPAsyncOperation.h */,
-				D477185721EDAAD20050DF14 /* RPAsyncOperation.m */,
-				D477185321EDA8710050DF14 /* FMFeedParserOperation.h */,
-				D477185621EDA8AE0050DF14 /* FMFeedParserOperation+ext.h */,
-				D477185421EDA8710050DF14 /* FMFeedParserOperation.m */,
-				D477185B21EDBBA30050DF14 /* FMParser.h */,
-				D477185C21EDBBA30050DF14 /* FMParser.m */,
-			);
-			path = Function;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,15 +276,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D477184E21EDA3D40050DF14 /* MWFeedItem.m in Sources */,
-				D477185921EDAAD20050DF14 /* RPAsyncOperation.m in Sources */,
+				D440D0022216970F003B7203 /* RPAsyncOperation.m in Sources */,
 				D477180B21EDA39A0050DF14 /* ViewController.m in Sources */,
+				D440D0032216970F003B7203 /* FMFeedParserOperation.m in Sources */,
 				D477185121EDA3D40050DF14 /* GTMNSString+HTML.m in Sources */,
 				D477185021EDA3D40050DF14 /* NSString+HTML.m in Sources */,
 				D477181621EDA39B0050DF14 /* main.m in Sources */,
+				D440D0012216970F003B7203 /* FMParser.m in Sources */,
 				D477184F21EDA3D40050DF14 /* NSDate+InternetDateTime.m in Sources */,
 				D477184D21EDA3D40050DF14 /* MWFeedParser.m in Sources */,
-				D477185521EDA8710050DF14 /* FMFeedParserOperation.m in Sources */,
-				D477185D21EDBBA30050DF14 /* FMParser.m in Sources */,
 				D477180821EDA39A0050DF14 /* AppDelegate.m in Sources */,
 				D477184C21EDA3D40050DF14 /* MWFeedInfo.m in Sources */,
 			);

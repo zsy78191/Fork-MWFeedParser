@@ -41,6 +41,9 @@
 	NSMutableString *string = [[NSMutableString alloc] initWithString:@"MWFeedItem: "];
 	if (title)   [string appendFormat:@"“%@”", EXCERPT(title, 50)];
 	if (date)    [string appendFormat:@" - %@", date];
+    if (self.categories) {
+        [string appendFormat:@" C[%@]",[self.categories componentsJoinedByString:@","]];
+    }
 	//if (link)    [string appendFormat:@" (%@)", link];
 	//if (summary) [string appendFormat:@", %@", EXCERPT(summary, 50)];
 	return string;
@@ -60,6 +63,7 @@
 		content = [decoder decodeObjectForKey:@"content"];
 		author = [decoder decodeObjectForKey:@"author"];
 		enclosures = [decoder decodeObjectForKey:@"enclosures"];
+        self.categories = [decoder decodeObjectForKey:@"categories"];
 	}
 	return self;
 }
@@ -74,6 +78,17 @@
 	if (content) [encoder encodeObject:content forKey:@"content"];
 	if (author) [encoder encodeObject:author forKey:@"author"];
 	if (enclosures) [encoder encodeObject:enclosures forKey:@"enclosures"];
+    if (self.categories) {
+        [encoder encodeObject:self.categories forKey:@"categories"];
+    }
+}
+
+- (NSMutableArray *)categories
+{
+    if (!_categories) {
+        _categories = [[NSMutableArray alloc] init];
+    }
+    return _categories;
 }
 
 @end

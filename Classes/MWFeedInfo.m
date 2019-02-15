@@ -41,7 +41,28 @@
 	NSMutableString *string = [[NSMutableString alloc] initWithString:@"MWFeedInfo: "];
 	if (title)   [string appendFormat:@"“%@”", EXCERPT(title, 50)];
 	//if (link)    [string appendFormat:@" (%@)", link];
-	//if (summary) [string appendFormat:@", %@", MWExcerpt(summary, 50)];
+    if (summary) [string appendFormat:@", %@", EXCERPT(summary, 50)];
+    if (self.pubDate) {
+        [string appendFormat:@"\n pubDate %@ ",EXCERPT([[self pubDate] description], 50)];
+    }
+    if (self.managingEditor) {
+        [string appendFormat:@"\n %@ ",EXCERPT([[self managingEditor] description], 50)];
+    }
+    if (self.lastBuildDate) {
+        [string appendFormat:@"\n lastBuildDate %@ ",EXCERPT([[self lastBuildDate] description], 50)];
+    }
+    if (self.icon) {
+        [string appendFormat:@"\n icon %@ ",EXCERPT([[self icon] description], 50)];
+    }
+    if (self.copyright) {
+        [string appendFormat:@"\n copyright %@ ",EXCERPT([[self copyright] description], 50)];
+    }
+    if (self.language) {
+         [string appendFormat:@"\n language %@ ",EXCERPT([[self language] description], 50)];
+    }
+    if (self.generator) {
+         [string appendFormat:@"\n generator %@ ",EXCERPT([[self generator] description], 50)];
+    }
 	return string;
 }
 
@@ -55,6 +76,13 @@
 		summary = [decoder decodeObjectForKey:@"summary"];
 		url = [decoder decodeObjectForKey:@"url"];
         language = [decoder decodeObjectForKey:@"language"];
+        self.pubDate = [decoder decodeObjectForKey:@"pubDate"];
+        self.managingEditor = [decoder decodeObjectForKey:@"managingEditor"];
+        self.ttl = [decoder decodeObjectForKey:@"ttl"];
+        self.lastBuildDate = [decoder decodeObjectForKey:@"lastBuildDate"];
+        self.copyright = [decoder decodeObjectForKey:@"copyright"];
+        self.icon = [decoder decodeObjectForKey:@"icon"];
+        self.generator = [decoder decodeObjectForKey:@"generator"];
 	}
 	return self;
 }
@@ -65,6 +93,27 @@
 	if (summary) [encoder encodeObject:summary forKey:@"summary"];
 	if (url) [encoder encodeObject:url forKey:@"url"];
     if (language) [encoder encodeObject:language forKey:@"language"];
+    if (self.pubDate) {
+        [encoder encodeObject:self.pubDate forKey:@"pubDate"];
+    }
+    if (self.managingEditor) {
+        [encoder encodeObject:self.managingEditor forKey:@"managingEditor"];
+    }
+    if (self.ttl) {
+        [encoder encodeObject:self.ttl forKey:@"ttl"];
+    }
+    if (self.lastBuildDate) {
+        [encoder encodeObject:self.lastBuildDate forKey:@"lastBuildDate"];
+    }
+    if (self.copyright) {
+        [encoder encodeObject:self.copyright forKey:@"copyright"];
+    }
+    if (self.icon) {
+        [encoder encodeObject:self.icon forKey:@"icon"];
+    }
+    if (self.generator) {
+        [encoder encodeObject:self.generator forKey:@"generator"];
+    }
 }
 
 @end

@@ -44,5 +44,13 @@
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, copy) NSURL *url;
 @property (nonatomic, copy) NSString *language;
+@property (nonatomic, copy) NSDate* pubDate;
+@property (nonatomic, copy) NSString* managingEditor;
+@property (nonatomic, copy) NSString* ttl;
+@property (nonatomic, copy) NSDate* lastBuildDate;
+@property (nonatomic, copy) NSString* copyright;
+@property (nonatomic, copy) NSString* icon;
+@property (nonatomic, copy) NSString* generator;
+
 
 @end
