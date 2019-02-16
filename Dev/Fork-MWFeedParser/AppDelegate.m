@@ -89,7 +89,7 @@
     [q2 setMaxConcurrentOperationCount:10];
     self.netQuene = q2;
     
-    FMFeedParserOperation* o = feed(@"1",@"https://www.liaoxuefeng.com/feed/articles",q2);
+    FMFeedParserOperation* o = feed(@"1",@"https://www.zhangzichuan.cn/atom.xml",q2);
     [o setType:FMParseTypeFull];
     [q addOperation:o];
 //    [q addOperation:feed(@"2",@"https://www.zhangzichuan.cn/atom.xml",q2)];

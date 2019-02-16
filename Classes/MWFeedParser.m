@@ -768,7 +768,7 @@ didReceiveResponse:(NSURLResponse *)response
                     
                     // Item
                     if (!processed) {
-                        MWLog(@"Item %@ -- %@",currentPath,processedText);
+                        NSLog(@"Item %@ -- %@ %@",currentPath,processedText,currentElementAttributes);
                         if ([currentPath isEqualToString:@"/feed/entry/title"]) { if (processedText.length > 0) item.title = processedText; processed = YES; }
                         else if ([currentPath isEqualToString:@"/feed/entry/link"]) { [self processAtomLink:currentElementAttributes andAddToMWObject:item]; processed = YES; }
                         else if ([currentPath isEqualToString:@"/feed/entry/id"]) { if (processedText.length > 0) item.identifier = processedText; processed = YES; }
@@ -1087,6 +1087,11 @@ didReceiveResponse:(NSURLResponse *)response
 		}
 		
 	}
+    else if(attributes && [attributes objectForKey:@"href"])
+    {
+        [MWObject setLink:[attributes objectForKey:@"href"]]; // Can be added to MWFeedItem or MWFeedInfo
+        return YES;
+    }
 	return NO;
 }
 

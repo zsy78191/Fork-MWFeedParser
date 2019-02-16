@@ -44,7 +44,7 @@
     if (self.categories) {
         [string appendFormat:@" C[%@]",[self.categories componentsJoinedByString:@","]];
     }
-	//if (link)    [string appendFormat:@" (%@)", link];
+    if (link)    [string appendFormat:@" (%@)", link];
 	//if (summary) [string appendFormat:@", %@", EXCERPT(summary, 50)];
 	return string;
 }
