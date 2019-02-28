@@ -96,12 +96,20 @@
             // Create default request with no caching
             NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url
                                                                     cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
-                                                                timeoutInterval:6];
+                                                                timeoutInterval:self.timeout];
             [req setValue:@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36" forHTTPHeaderField:@"User-Agent"];
             self.request = req;
         }
 	}
 	return self;
+}
+
+- (void)setTimeout:(NSUInteger)timeout
+{
+    _timeout = timeout;
+    NSMutableURLRequest* m = [self.request mutableCopy];
+    m.timeoutInterval = _timeout;
+    self.request = [m copy];
 }
 
 // Init with a custom feed request
@@ -176,7 +184,7 @@
     asyncData = [[NSMutableData alloc] init];
     NSURLSessionConfiguration* c = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:[NSString stringWithFormat:@"com.feed.rework.%@",[NSUUID UUID]]];
     c.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
-    c.timeoutIntervalForRequest = 5;
+//    c.timeoutIntervalForRequest = 5;
     NSURLSession* s = [NSURLSession sessionWithConfiguration:c delegate:self delegateQueue:quene];
 //    if (data && !error) {
 //        [self startParsingData:data textEncodingName:[response textEncodingName]]; // Process
@@ -768,7 +776,7 @@ didReceiveResponse:(NSURLResponse *)response
                     
                     // Item
                     if (!processed) {
-                        NSLog(@"Item %@ -- %@ %@",currentPath,processedText,currentElementAttributes);
+                        MWLog(@"Item %@ -- %@ %@",currentPath,processedText,currentElementAttributes);
                         if ([currentPath isEqualToString:@"/feed/entry/title"]) { if (processedText.length > 0) item.title = processedText; processed = YES; }
                         else if ([currentPath isEqualToString:@"/feed/entry/link"]) { [self processAtomLink:currentElementAttributes andAddToMWObject:item]; processed = YES; }
                         else if ([currentPath isEqualToString:@"/feed/entry/id"]) { if (processedText.length > 0) item.identifier = processedText; processed = YES; }

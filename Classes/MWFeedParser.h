@@ -126,6 +126,9 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 // Whether parsing is in progress
 @property (nonatomic, readonly, getter=isParsing) BOOL parsing;
 
+// Network timeout, default is 5s
+@property (nonatomic, assign) NSUInteger timeout;
+
 #pragma mark Public Methods
 
 // Init MWFeedParser with a URL string
@@ -143,5 +146,6 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 
 // Returns the URL
 - (NSURL *)url;
+
 
 @end

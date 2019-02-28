@@ -11,6 +11,15 @@
 
 @implementation FMFeedParserOperation
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.timeout = 5;
+    }
+    return self;
+}
+
 - (void)main
 {
     [super main];
@@ -28,6 +37,8 @@
         default:
             break;
     }
+    
+    parser.timeout = self.timeout;
     
     parser.delegate  = self;
     

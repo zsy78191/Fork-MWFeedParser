@@ -72,6 +72,7 @@
         o.feedURL = [NSURL URLWithString:url];
         o.title = name;
         o.netWorkQuene = quene;
+        o.timeout = 5;
         [o setParseInfoBlock:^(MWFeedInfo * _Nonnull info) {
             NSLog(@"%@",info);
         }];
@@ -93,7 +94,7 @@
     [o setType:FMParseTypeFull];
     [q addOperation:o];
 //    [q addOperation:feed(@"2",@"https://www.zhangzichuan.cn/atom.xml",q2)];
-//    [q addOperation:feed(@"3",@"http://www.zhihu.com/rss",q2)];
+    [q addOperation:feed(@"3",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"4",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"5",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"6",@"http://www.zhihu.com/rss",q2)];
