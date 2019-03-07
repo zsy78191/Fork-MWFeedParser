@@ -94,6 +94,14 @@ static NSDateFormatter *_internetDateTimeFormatter = nil;
                     [dateFormatter setDateFormat:@"d MMM yyyy HH:mm"];
                     date = [dateFormatter dateFromString:RFC822String];
                 }
+                if (!date) { //2019-03-06 13:40:52
+                    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+                    date = [dateFormatter dateFromString:RFC822String];
+                }
+                if (!date) { //2019-03-06
+                    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+                    date = [dateFormatter dateFromString:RFC822String];
+                }
             }
             if (!date) NSLog(@"Could not parse RFC822 date: \"%@\" Possible invalid format.", dateString);
             
