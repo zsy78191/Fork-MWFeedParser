@@ -102,6 +102,9 @@ static NSDateFormatter *_internetDateTimeFormatter = nil;
                     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
                     date = [dateFormatter dateFromString:RFC822String];
                 }
+                if (!date) { //2019-03-11 10:19:01 +0800
+                    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZZ"];
+                }
             }
             if (!date) NSLog(@"Could not parse RFC822 date: \"%@\" Possible invalid format.", dateString);
             
@@ -176,6 +179,9 @@ static NSDateFormatter *_internetDateTimeFormatter = nil;
         if (!date) { // 星期三, 07 四月 2010 22:07:00 +0800
             [dateFormatter setDateFormat:@"EEE, dd MM yyyy HH:mm:ss ZZZ"];
             date = [dateFormatter dateFromString:dateString];
+        }
+        if (!date) { //2019-03-11 10:19:01 +0800
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZZ"];
         }
         if (!date) NSLog(@"Could not parse date: \"%@\" Possible invalid format.", dateString);
     }
