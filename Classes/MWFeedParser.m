@@ -230,7 +230,7 @@ didReceiveResponse:(NSURLResponse *)response
   
     // Error
     if (error) {
-        [self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed andDescription:[error localizedDescription]];
+        [self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed andDescription:[error localizedDescription]?[error localizedDescription]:[error description]];
     }
     else {
         if (!stopped) [self startParsingData:asyncData textEncodingName:self.asyncTextEncodingName];
@@ -260,7 +260,7 @@ didReceiveResponse:(NSURLResponse *)response
     self.asyncTextEncodingName = nil;
     
     // Error
-    [self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed andDescription:[error localizedDescription]];
+    [self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed andDescription:[error localizedDescription]?[error localizedDescription]:[error description]];
 }
 
 // Begin XML parsing
@@ -428,6 +428,9 @@ didReceiveResponse:(NSURLResponse *)response
 		parsingComplete = YES;
 		
 		// Create error
+        if (!description) {
+            description = @"NetWorkError";
+        }
 		NSError *error = [NSError errorWithDomain:MWErrorDomain 
 											 code:code 
 										 userInfo:[NSDictionary dictionaryWithObject:description
@@ -471,7 +474,7 @@ didReceiveResponse:(NSURLResponse *)response
 	self.asyncTextEncodingName = nil;
 	
     // Error
-	[self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed andDescription:[error localizedDescription]];
+    [self parsingFailedWithErrorCode:MWErrorCodeConnectionFailed andDescription:[error localizedDescription]?[error localizedDescription]:[error description]];
 	
 }
 
@@ -927,7 +930,7 @@ didReceiveResponse:(NSURLResponse *)response
 	// Fail with error
 	if (!aborted) {
 		// This method is called when legimitaly aboring the parser so ignore if this is the case
-		[self parsingFailedWithErrorCode:MWErrorCodeFeedParsingError andDescription:[parseError localizedDescription]];
+        [self parsingFailedWithErrorCode:MWErrorCodeFeedParsingError andDescription:[parseError localizedDescription]?[parseError localizedDescription]:[parseError description]];
 	}
 	
 }
@@ -936,7 +939,7 @@ didReceiveResponse:(NSURLResponse *)response
 	MWXMLLog(@"NSXMLParser: validationErrorOccurred: %@", validError);
 	
 	// Fail with error
-	[self parsingFailedWithErrorCode:MWErrorCodeFeedValidationError andDescription:[validError localizedDescription]];
+    [self parsingFailedWithErrorCode:MWErrorCodeFeedValidationError andDescription:[validError localizedDescription]?[validError localizedDescription]:[validError description]];
 	
 }
 
@@ -1105,7 +1108,7 @@ didReceiveResponse:(NSURLResponse *)response
 
 - (void)dealloc
 {
-    NSLog(@"%@ %s",self,__func__);
+//    NSLog(@"%@ %s",self,__func__);
 }
 
 @end
