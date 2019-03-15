@@ -92,13 +92,13 @@
 		D440CFF92216970F003B7203 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				D440CFFE2216970F003B7203 /* FMParser.h */,
 				D440CFFA2216970F003B7203 /* FMParser.m */,
 				D440CFFB2216970F003B7203 /* FMFeedParserOperation.h */,
-				D440CFFC2216970F003B7203 /* FMFeedParserOperation+ext.h */,
-				D440CFFD2216970F003B7203 /* RPAsyncOperation.m */,
-				D440CFFE2216970F003B7203 /* FMParser.h */,
 				D440CFFF2216970F003B7203 /* FMFeedParserOperation.m */,
+				D440CFFC2216970F003B7203 /* FMFeedParserOperation+ext.h */,
 				D440D0002216970F003B7203 /* RPAsyncOperation.h */,
+				D440CFFD2216970F003B7203 /* RPAsyncOperation.m */,
 			);
 			name = Function;
 			path = ../Classes/Function;

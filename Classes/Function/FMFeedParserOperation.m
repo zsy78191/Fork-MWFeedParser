@@ -15,9 +15,15 @@
 {
     self = [super init];
     if (self) {
-        self.timeout = 5;
+        self.timeout = 8;
     }
     return self;
+}
+
+- (void)cancel
+{
+    [super cancel];
+    [self.parser stopParsing];
 }
 
 - (void)main
@@ -39,7 +45,6 @@
     }
     
     parser.timeout = self.timeout;
-    
     parser.delegate  = self;
     
     if (self.cancelled) {

@@ -1,8 +1,0 @@
-[33m
-[31m-> LzmaSDKObjC (1.0.5) [DEPRECATED in favor of LzmaSDK-ObjC][0m
-   Lzma SDK for Objective-C based on extended functionality of the C++ LZMA code
-   pod 'LzmaSDKObjC', '~> 1.0.5'
-   - Homepage: https://github.com/OlehKulykov/LzmaSDKObjC
-   - Source:   https://github.com/OlehKulykov/LzmaSDKObjC.git
-   - Versions: 1.0.5, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0, 0.1.3, 0.1.2, 0.1.1
-   [master repo]
