@@ -77,6 +77,10 @@ static NSDateFormatter *_internetDateTimeFormatter = nil;
                     [dateFormatter setDateFormat:@"EEE, d MMM yyyy HH:mm"];
                     date = [dateFormatter dateFromString:RFC822String];
                 }
+                if (!date) { //Wed,13 Mar 2019 04:17:17 GMT+8
+                    [dateFormatter setDateFormat:@"EEE,d MMM yyyy HH:mm:ss zzzz"];
+                    date = [dateFormatter dateFromString:RFC822String];
+                }
             } else {
                 if (!date) { // 19 May 2002 15:21:36 GMT
                     [dateFormatter setDateFormat:@"d MMM yyyy HH:mm:ss zzz"];
@@ -104,6 +108,11 @@ static NSDateFormatter *_internetDateTimeFormatter = nil;
                 }
                 if (!date) { //2019-03-11 10:19:01 +0800
                     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZZ"];
+                    date = [dateFormatter dateFromString:RFC822String];
+                }
+                if (!date) { //18/08/10 00:00
+                    [dateFormatter setDateFormat:@"yy/MM/dd HH:mm"];
+                    date = [dateFormatter dateFromString:RFC822String];
                 }
             }
             if (!date) NSLog(@"Could not parse RFC822 date: \"%@\" Possible invalid format.", dateString);
@@ -186,6 +195,7 @@ static NSDateFormatter *_internetDateTimeFormatter = nil;
         }
         if (!date) { //2019-03-11 10:19:01 +0800
             [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZZ"];
+            date = [dateFormatter dateFromString:dateString];
         }
         if (!date) NSLog(@"Could not parse date: \"%@\" Possible invalid format.", dateString);
     }

@@ -94,7 +94,7 @@
     [o setType:FMParseTypeFull];
     [q addOperation:o];
 //    [q addOperation:feed(@"2",@"https://www.zhangzichuan.cn/atom.xml",q2)];
-    [q addOperation:feed(@"3",@"http://www.zhihu.com/rss",q2)];
+    [q addOperation:feed(@"3",@"http://rss.cnki.net/kns/rss.aspx?Journal=ZXDT&Virtual=knavi",q2)];
 //    [q addOperation:feed(@"4",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"5",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"6",@"http://www.zhihu.com/rss",q2)];
