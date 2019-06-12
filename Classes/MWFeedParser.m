@@ -183,7 +183,12 @@
 	
     asyncData = [[NSMutableData alloc] init];
     NSURLSessionConfiguration* c = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:[NSString stringWithFormat:@"com.feed.rework.%@",[NSUUID UUID]]];
+    c.HTTPShouldUsePipelining = YES;
+    c.multipathServiceType = NSURLSessionMultipathServiceTypeInteractive;
     c.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
+    if (self.configSession) {
+        c = self.configSession(c);
+    }
 //    c.timeoutIntervalForRequest = 5;
     NSURLSession* s = [NSURLSession sessionWithConfiguration:c delegate:self delegateQueue:quene];
 //    if (data && !error) {

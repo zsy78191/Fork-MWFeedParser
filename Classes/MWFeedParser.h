@@ -140,6 +140,8 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 // Begin parsing
 - (BOOL)parseWithQuene:(NSOperationQueue*)quene;
 
+@property (nonatomic, strong) NSURLSessionConfiguration*(^configSession)(NSURLSessionConfiguration* c);
+
 
 // Stop parsing
 - (void)stopParsing;

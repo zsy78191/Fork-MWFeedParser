@@ -79,6 +79,9 @@
         [o setParseItemBlock:^(MWFeedItem * _Nonnull item) {
             NSLog(@"%@",item);
         }];
+        [o setParseErrorBlock:^(NSError * _Nonnull error) {
+            NSLog(@"%@",error);
+        }];
         return o;
     };
     
@@ -90,11 +93,11 @@
     [q2 setMaxConcurrentOperationCount:10];
     self.netQuene = q2;
     
-    FMFeedParserOperation* o = feed(@"1",@"https://www.zhangzichuan.cn/atom.xml",q2);
-    [o setType:FMParseTypeFull];
-    [q addOperation:o];
-//    [q addOperation:feed(@"2",@"https://www.zhangzichuan.cn/atom.xml",q2)];
-    [q addOperation:feed(@"3",@"http://rss.cnki.net/kns/rss.aspx?Journal=ZXDT&Virtual=knavi",q2)];
+//    FMFeedParserOperation* o = feed(@"1",@"http://www.dayanzai.me/feed",q2);
+//    [o setType:FMParseTypeFull];
+//    [q addOperation:o];
+    [q addOperation:feed(@"2",@"http://rss.zhangzichuan.cn/x.xml",q2)];
+//    [q addOperation:feed(@"3",@"http://rss.cnki.net/kns/rss.aspx?Journal=ZXDT&Virtual=knavi",q2)];
 //    [q addOperation:feed(@"4",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"5",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"6",@"http://www.zhihu.com/rss",q2)];
