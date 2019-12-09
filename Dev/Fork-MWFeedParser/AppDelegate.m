@@ -96,7 +96,7 @@
 //    FMFeedParserOperation* o = feed(@"1",@"http://www.dayanzai.me/feed",q2);
 //    [o setType:FMParseTypeFull];
 //    [q addOperation:o];
-    [q addOperation:feed(@"2",@"http://rss.zhangzichuan.cn/x.xml",q2)];
+    [q addOperation:feed(@"2",@"http://www.guxiaobei.com/feed",q2)];
 //    [q addOperation:feed(@"3",@"http://rss.cnki.net/kns/rss.aspx?Journal=ZXDT&Virtual=knavi",q2)];
 //    [q addOperation:feed(@"4",@"http://www.zhihu.com/rss",q2)];
 //    [q addOperation:feed(@"5",@"http://www.zhihu.com/rss",q2)];

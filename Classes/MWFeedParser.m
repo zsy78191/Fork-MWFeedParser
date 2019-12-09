@@ -308,7 +308,7 @@ didReceiveResponse:(NSURLResponse *)response
 			
 			// Nil data
 			data = nil;
-			
+            string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 			// Parse
 			if (string) {
 				
@@ -340,7 +340,11 @@ didReceiveResponse:(NSURLResponse *)response
 				
 			}
 			
-		}
+        } else {
+            NSString* string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            data = [string dataUsingEncoding:NSUTF8StringEncoding];
+        }
 		
 		// Create NSXMLParser
 		if (data) {
